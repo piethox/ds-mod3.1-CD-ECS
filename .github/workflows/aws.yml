@@ -54,7 +54,7 @@ jobs:
       id: build-image
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        ECR_REPOSITORY: ds-mod3.5
+        ECR_REPOSITORY: david-cloud
         IMAGE_TAG: latest
       run: |
         # Build a docker container and
@@ -69,7 +69,7 @@ jobs:
       uses: aws-actions/amazon-ecs-render-task-definition@v1
       with:
         task-definition: ecs-task-definition.json
-        container-name: ds-mod3.5
+        container-name: david-cloud
         image: ${{ steps.build-image.outputs.image }}
 
     - name: Deploy Amazon ECS task definition
