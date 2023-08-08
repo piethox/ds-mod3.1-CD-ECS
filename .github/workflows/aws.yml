@@ -55,7 +55,7 @@ jobs:
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: ds-mod3.5
-        IMAGE_TAG: latest
+        IMAGE_TAG: david-node
       run: |
         # Build a docker container and
         # push it to ECR so that it can
@@ -76,6 +76,6 @@ jobs:
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
-        service: ds-mod3.5-ecs-service
+        service: ds-nodejs-svc
         cluster: ds-cluster
         wait-for-service-stability: true
