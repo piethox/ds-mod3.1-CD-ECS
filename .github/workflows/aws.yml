@@ -77,5 +77,5 @@ jobs:
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
         service: ds-nodejs-svc
-        cluster: ds-cluster
+        cluster: david-cluster
         wait-for-service-stability: true
