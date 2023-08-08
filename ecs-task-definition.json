@@ -5,11 +5,11 @@
     "containerDefinitions": [
         {
             "name": "david-cloud",
-            "image": "255945442255.dkr.ecr.ap-southeast-1.amazonaws.com/david-cloud:david",
+            "image": "255945442255.dkr.ecr.ap-southeast-1.amazonaws.com/david-cloud:latest",
             "portMappings": [
                 {
-                    "containerPort": 3000,
-                    "hostPort": 3000,
+                    "containerPort": 8080,
+                    "hostPort": 8080,
                     "protocol": "tcp"
                 }
             ],
